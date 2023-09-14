@@ -1,32 +1,39 @@
-section{
-    margin-top: 20px;
-}
-.yellow_line-1 {
-    border: none;
-    width: 60px;
-    height: 3px;
-    background-color: $yellow-color;
-}
-.section-1_p {
-    margin: 0 0 0 20px;
-    P {
-        color: $blue-color !important;
-        font-weight: 700 !important;
-    }
-}
-.Business_Consultant {
-    width: 47%;
-}
-.animate-text {
-    font-family: "BebasNeue", sans-serif;
-    font-size: $font-size-h1;
-    margin: 30px 0;
-}
+@use "../partials/importers" as *;
+
 .section-1 {
+    .Business_Consultant {
+        .yellow_line {
+            border: none;
+            margin: auto 0;
+            width: 60px;
+            height: 3px;
+            background-color: $yellow-color;
+        }
+        p {
+            margin: 0 0 0 20px;
+            color: $blue-color !important;
+            font-weight: 700 !important;
+        }
+    }
+
+    h1 {
+        letter-spacing: 7px;
+        font-family: BebasNeue-Regular;
+        font-size: 70px;
+        margin: 30px 0;
+    }
     p {
         color: $gray-color;
         font-size: 17px;
         line-height: 27px;
+    }
+
+    .Get-Started-btn {
+        @include button;
+        font-size: 18px;
+        margin: 30px 0px;
+        padding: 14px 20px;
+        border-radius: 30px;
     }
 }
 .section-1-bottom {
@@ -34,7 +41,7 @@ section{
 
     .flex {
         margin-top: 10px;
-        .div_1 {
+        .yellow-dot {
             margin: 3px 30px;
             color: $yellow-color;
         }
@@ -42,39 +49,7 @@ section{
 }
 .section-2 {
     margin: 0 auto;
-}
-
-.position_relative {
-    width: 75%;
-    margin: 0 auto;
-    position: relative;
-    top: -40px;
-
-    .div_2 {
-        background-color: $white-color;
-        box-shadow: 0px 0px 60px -25px $black-color;
-        padding: 15px;
-        h2 {
-            color: $blue-color;
-        }
-        p {
-            color: $gray-color;
-            margin: 15px 0;
-        }
-        .yello_line {
-            width: 100%;
-            height: 3px;
-            background-color: $yellow-color;
-        }
-    }
-
-    .div_2:hover {
-        background-color: $blue-color;
-        h2 {
-            color: $yellow-color;
-        }
-        p {
-            color: $white-color;
-        }
+    img {
+        @include image;
     }
 }

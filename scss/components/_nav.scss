@@ -1,25 +1,29 @@
-nav {
-    height: 50px;
+@use "../partials/importers" as *;
 
+nav {
     div {
         width: 33.33%;
     }
     ul {
+        @include flex;
+        gap: 25px;
+
         li {
-            display: inline-block;
             cursor: pointer;
 
+            .active {
+                color: $yellow-color;
+            }
             a {
                 color: $gray-color;
                 display: block;
-                padding: 0 30px 0 0px;
                 font-size: 16px;
                 line-height: 50px;
                 transition: 0.5s;
-            }
 
-            a:hover {
-                color: $yellow-color;
+                &:hover {
+                    color: $yellow-color;
+                }
             }
         }
     }
@@ -30,10 +34,35 @@ nav {
     cursor: pointer;
 
     a {
-        line-height: 80px;
+        margin-top: 10px;
     }
+}
+.navbar {
+    @include flex;
+    justify-content: space-around;
 }
 
 .nav-btn {
-    text-align: end;
+    @include flex;
+    justify-content: end;
+    .active{
+        background-color: $white-color;
+        margin-right: 20px;
+        a{
+        color: $gray-color;
+        }
+        &:hover{
+            background-color: $blue-color;
+            a{
+            color: $white-color;
+            }
+        }
+    }
+    button {
+        @include button;
+        font-size: 15px;
+        margin: 10px 0;
+        padding: 10px 16px;
+        border-radius: 20px;
+    }
 }

@@ -1,37 +1,64 @@
-.btn-1 {
-    cursor: pointer;
-    position: relative;
-    background-color: $white-color;
-    border: none;
-    font-size: 15px;
-    margin: 10px 0 0 10px;
-    padding: 10px 16px;
-    border-radius: 20px;
-    width: auto;
-    a {
-        color: $gray-color;
-    }
+@use "./variables" as *;
+
+@mixin button {
+  cursor: pointer;
+  display: block;
+  background-color: $blue-color;
+  border: none;
+  
+  a{
+  color: $white-color;
+  }
 }
 
-.btn-1:hover {
-    background-color: $blue-color;
-    a {
-        color: $white-color;
-    }
-}
+// .btn-1 {
+//     position: relative;
+//     background-color: $white-color;
+//     font-size: 15px;
+//     margin: 10px 0 0 10px;
+//     padding: 10px 16px;
+//     border-radius: 20px;
+//     width: auto;
+//     a {
+//         color: $gray-color;
+//     }
+// }
 
-.btn-2 {
-    cursor: pointer;
-    position: relative;
-    background-color: $blue-color;
-    border: none;
-    font-size: 18px;
-    margin: 30px 0px;
-    padding: 14px 20px;
-    border-radius: 30px;
-    width: auto;
-    a {
-        color: $white-color;
-    }
-}
+// .btn-1:hover {
+//     a {
+//     }
+// }
 
+// .btn-2 {
+//     cursor: pointer;
+//     position: relative;
+//     background-color: $blue-color;
+//     border: none;
+//     font-size: 18px;
+//     margin: 30px 0px;
+//     padding: 14px 20px;
+//     border-radius: 30px;
+//     width: auto;
+//     a {
+//     }
+// }
+
+@mixin image {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  
+  @mixin flex {
+    display: flex;
+  }
+  
+  @mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  @mixin shadow {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.65);
+  }

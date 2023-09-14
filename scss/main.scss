@@ -1,9 +1,6 @@
 // import files
 
-@import 'base/general';
-@import 'base/elements';
-@import 'partials/variables';
-@import 'partials/mixins';
-@import 'partials/typography';
-@import 'components/nav';
-@import 'components/section';
+@use "./base/elements";
+@use "./components/nav";
+@use "./components/section";
+@use "./components/footer";

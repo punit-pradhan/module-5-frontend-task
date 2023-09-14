@@ -1,10 +1,59 @@
+@font-face {
+  font-family: BebasNeue-Regular;
+  src: url(../fonts/BebasNeue-Regular.ttf);
+}
+@font-face {
+  font-family: Lato-Black;
+  src: url(../fonts/Lato-Black.ttf);
+}
+@font-face {
+  font-family: Lato-BlackItalic;
+  src: url(../fonts/Lato-BlackItalic.ttf);
+}
+@font-face {
+  font-family: Lato-Bold;
+  src: url(../fonts/Lato-Bold.ttf);
+}
+@font-face {
+  font-family: Lato-Italic;
+  src: url(../fonts/Lato-Italic.ttf);
+}
+@font-face {
+  font-family: Lato-Light;
+  src: url(../fonts/Lato-Light.ttf);
+}
+@font-face {
+  font-family: Lato-LightItalic;
+  src: url(../fonts/Lato-LightItalic.ttf);
+}
+@font-face {
+  font-family: Lato-Regular;
+  src: url(../fonts/Lato-Regular.ttf);
+}
+@font-face {
+  font-family: Lato-Thin;
+  src: url(../fonts/Lato-Thin.ttf);
+}
+@font-face {
+  font-family: Lato-ThinItalic;
+  src: url(../fonts/Lato-ThinItalic.ttf);
+}
+@font-face {
+  font-family: Lato-BoldItalic;
+  src: url(../fonts/Lato-BoldItalic.ttf);
+}
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
-a {
-  text-decoration: none;
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Lato-Regular, sans-serif;
 }
 
 .container {
@@ -16,91 +65,35 @@ a {
   display: flex;
 }
 
-.flex_1 {
-  display: flex;
-  justify-content: space-between;
+.bg-color {
+  background-color: #ededed;
 }
 
-body {
-  font-family: "Lato", sans-serif;
-  font-weight: 500;
+a {
+  display: block;
+  text-decoration: none;
 }
 
-.center {
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-content: center;
-  align-items: center;
+ul {
+  list-style-type: none;
 }
 
-.margin-right-20 {
-  margin-right: 20px;
-}
-
-.btn-1 {
-  cursor: pointer;
-  position: relative;
-  background-color: #ffffff;
-  border: none;
-  font-size: 15px;
-  margin: 10px 0 0 10px;
-  padding: 10px 16px;
-  border-radius: 20px;
-  width: auto;
-}
-.btn-1 a {
-  color: #666666;
-}
-
-.btn-1:hover {
-  background-color: #007a82;
-}
-.btn-1:hover a {
-  color: #ffffff;
-}
-
-.btn-2 {
-  cursor: pointer;
-  position: relative;
-  background-color: #007a82;
-  border: none;
-  font-size: 18px;
-  margin: 30px 0px;
-  padding: 14px 20px;
-  border-radius: 30px;
-  width: auto;
-}
-.btn-2 a {
-  color: #ffffff;
-}
-
-@font-face {
-  font-family: "BebasNeue";
-  src: url("/fonts/Bebas_Neue/BebasNeue-Regular.ttf") format("ttf");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Lato";
-  src: url("/fonts/Lato/Lato-Regular.ttf") format("ttf"), url("/fonts/Lato/Lato-Black.ttf") format("ttf");
-  font-weight: normal;
-  font-style: normal;
-}
-nav {
-  height: 50px;
-}
 nav div {
   width: 33.33%;
 }
+nav ul {
+  display: flex;
+  gap: 25px;
+}
 nav ul li {
-  display: inline-block;
   cursor: pointer;
+}
+nav ul li .active {
+  color: #febb0c;
 }
 nav ul li a {
   color: #666666;
   display: block;
-  padding: 0 30px 0 0px;
   font-size: 16px;
   line-height: 50px;
   transition: 0.5s;
@@ -114,46 +107,80 @@ nav ul li a:hover {
   cursor: pointer;
 }
 .logo a {
-  line-height: 80px;
+  margin-top: 10px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
 }
 
 .nav-btn {
-  text-align: end;
+  display: flex;
+  justify-content: end;
 }
-
-section {
-  margin-top: 20px;
+.nav-btn .active {
+  background-color: #ffffff;
+  margin-right: 20px;
 }
-
-.yellow_line-1 {
+.nav-btn .active a {
+  color: #666666;
+}
+.nav-btn .active:hover {
+  background-color: #007a82;
+}
+.nav-btn .active:hover a {
+  color: #ffffff;
+}
+.nav-btn button {
+  cursor: pointer;
+  display: block;
+  background-color: #007a82;
   border: none;
+  font-size: 15px;
+  margin: 10px 0;
+  padding: 10px 16px;
+  border-radius: 20px;
+}
+.nav-btn button a {
+  color: #ffffff;
+}
+
+.section-1 .Business_Consultant .yellow_line {
+  border: none;
+  margin: auto 0;
   width: 60px;
   height: 3px;
   background-color: #febb0c;
 }
-
-.section-1_p {
+.section-1 .Business_Consultant p {
   margin: 0 0 0 20px;
-}
-.section-1_p P {
   color: #007a82 !important;
   font-weight: 700 !important;
 }
-
-.Business_Consultant {
-  width: 47%;
-}
-
-.animate-text {
-  font-family: "BebasNeue", sans-serif;
-  font-size: 50px;
+.section-1 h1 {
+  letter-spacing: 7px;
+  font-family: BebasNeue-Regular;
+  font-size: 70px;
   margin: 30px 0;
 }
-
 .section-1 p {
   color: #666666;
   font-size: 17px;
   line-height: 27px;
+}
+.section-1 .Get-Started-btn {
+  cursor: pointer;
+  display: block;
+  background-color: #007a82;
+  border: none;
+  font-size: 18px;
+  margin: 30px 0px;
+  padding: 14px 20px;
+  border-radius: 30px;
+}
+.section-1 .Get-Started-btn a {
+  color: #ffffff;
 }
 
 .section-1-bottom {
@@ -162,13 +189,18 @@ section {
 .section-1-bottom .flex {
   margin-top: 10px;
 }
-.section-1-bottom .flex .div_1 {
+.section-1-bottom .flex .yellow-dot {
   margin: 3px 30px;
   color: #febb0c;
 }
 
 .section-2 {
   margin: 0 auto;
+}
+.section-2 img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .position_relative {
@@ -177,29 +209,32 @@ section {
   position: relative;
   top: -40px;
 }
-.position_relative .div_2 {
+.position_relative .flex {
+  gap: 20px;
+}
+.position_relative .employees-cards {
   background-color: #ffffff;
-  box-shadow: 0px 0px 60px -25px #3d3d3d;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.65);
   padding: 15px;
 }
-.position_relative .div_2 h2 {
+.position_relative .employees-cards h2 {
   color: #007a82;
 }
-.position_relative .div_2 p {
+.position_relative .employees-cards p {
   color: #666666;
   margin: 15px 0;
 }
-.position_relative .div_2 .yello_line {
+.position_relative .employees-cards .yello_line {
   width: 100%;
   height: 3px;
   background-color: #febb0c;
 }
-.position_relative .div_2:hover {
+.position_relative .employees-cards:hover {
   background-color: #007a82;
 }
-.position_relative .div_2:hover h2 {
+.position_relative .employees-cards:hover h2 {
   color: #febb0c;
 }
-.position_relative .div_2:hover p {
+.position_relative .employees-cards:hover p {
   color: #ffffff;
 }/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,38 @@
+@use "../partials/importers" as *;
+
+.position_relative {
+    width: 75%;
+    margin: 0 auto;
+    position: relative;
+    top: -40px;
+.flex{
+    gap: 20px;
+}
+    .employees-cards {
+        background-color: $white-color;
+        @include shadow;
+        padding: 15px;
+        h2 {
+            color: $blue-color;
+        }
+        p {
+            color: $gray-color;
+            margin: 15px 0;
+        }
+        .yello_line {
+            width: 100%;
+            height: 3px;
+            background-color: $yellow-color;
+        }
+
+        &:hover {
+            background-color: $blue-color;
+            h2 {
+                color: $yellow-color;
+            }
+            p {
+                color: $white-color;
+            }
+        }
+    }
+}

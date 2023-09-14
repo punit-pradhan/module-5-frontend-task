@@ -9,9 +9,9 @@
 </head>
 
 <body>
-    <header class="container">
+    <header class="bg-color">
         <!-- nav menu Started -->
-        <nav class="flex_1">
+        <nav class="navbar container">
             <div>
                 <ul>
                     <li><a class="active" href="#">Home</a></li>
@@ -30,10 +30,10 @@
                 </a>
             </div>
             <div class="nav-btn">
-                <button class="btn-1">
+                <button class="active">
                     <a href="#">Sign in</a>
                 </button>
-                <button class="btn-1">
+                <button>
                     <a href="#">Sign up</a>
                 </button>
             </div>
@@ -41,45 +41,38 @@
         <!-- nav menu ended -->
         ​
     </header>
-    <section>
+    <section class="bg-color">
         <div class="container">
             <div class="flex">
                 <div class="section-1">
-                    <div class="flex center Business_Consultant">
-                        <hr class="yellow_line-1">
-                        <div class="section-1_p">
+                    <div class="flex Business_Consultant">
+                        <hr class="yellow_line">
+                        <div>
                             <p>Business Consultant</p>
                         </div>
                     </div>
-                    <div class="main">
-                        <h1 class="animate-text">
-                            <span>
-                                FIND THE SOLUTION<br>WITH THE EXPERT
-                            </span>
-                            <!-- <span>WE WILL<br>HELP YOU.</span> -->
-                        </h1>
-                    </div>
+                    <h1>FIND THE SOLUTION<br>WITH THE EXPERT</h1>
                     <p>We have helped companies overcome challenges and increase revenue <br>or grow. From accounting,
                         to
                         human resource to technical support,<br> we will make it easier, so that you don't need to
                         figure
                         out all on your own.</p>
-                    <button class="btn-2">
+                    <button class="Get-Started-btn">
                         <a href="#">Get Started</a>
                     </button>
                     <div class="section-1-bottom">
                         <div class="flex">
                             <p>Industries </p>
-                            <h4 class="div_1">●</h4>
+                            <h4 class="yellow-dot">●</h4>
                             <p> Agriculture</p>
-                            <h4 class="div_1">●</h4>
+                            <h4 class="yellow-dot">●</h4>
                             <p>Automotive</p>
                         </div>
                         <div class="flex">
                             <p>Chemicals</p>
-                            <h4 class="div_1">●</h4>
+                            <h4 class="yellow-dot">●</h4>
                             <p> Engineering</p>
-                            <h4 class="div_1">●</h4>
+                            <h4 class="yellow-dot">●</h4>
                             <p> Healthcare</p>
                         </div>
                     </div>
@@ -88,68 +81,38 @@
                     <img src="images/banner-img.png" alt="">
                 </div>
             </div>
-            <div class="position_relative">
-                <div class="flex">
-                    <div class="div_2 margin-right-20">
-                        <h2>700+</h2>
-                        <h2>EMPLOYEES</h2>
-                        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                        <div class="yello_line"></div>
-                    </div>
-                    <div class="div_2 margin-right-20">
-                        <h2>700+</h2>
-                        <h2>EMPLOYEES</h2>
-                        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                        <div class="yello_line"></div>
-                    </div>
-                    <div class="div_2 margin-right-20">
-                        <h2>700+</h2>
-                        <h2>EMPLOYEES</h2>
-                        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                        <div class="yello_line"></div>
-                    </div>
-                    <div class="div_2">
-                        <h2>700+</h2>
-                        <h2>EMPLOYEES</h2>
-                        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                        <div class="yello_line"></div>
-                    </div>
+        </div>
+    </section>
+    <footer class="container">
+        <div class="position_relative">
+            <div class="flex">
+                <div class="employees-cards">
+                    <h2>700+</h2>
+                    <h2>EMPLOYEES</h2>
+                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                    <div class="yello_line"></div>
+                </div>
+                <div class="employees-cards">
+                    <h2>700+</h2>
+                    <h2>EMPLOYEES</h2>
+                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                    <div class="yello_line"></div>
+                </div>
+                <div class="employees-cards">
+                    <h2>700+</h2>
+                    <h2>EMPLOYEES</h2>
+                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                    <div class="yello_line"></div>
+                </div>
+                <div class="employees-cards">
+                    <h2>700+</h2>
+                    <h2>EMPLOYEES</h2>
+                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                    <div class="yello_line"></div>
                 </div>
             </div>
         </div>
-        <!-- <script>
-​
-            const txts = document.querySelector(".animate-text").children,
-                txtsLen = txts.length;
-            let index = 0;
-            const textInTimer = 3000,
-                textOutTimer = 2800;
-​
-            function animateText() {
-                for (let i = 0; i < txtsLen; i++) {
-                    txts[i].classList.remove("text-in", "text-out");
-                }
-                txts[index].classList.add("text-in");
-​
-                setTimeout(function () {
-                    txts[index].classList.add("text-out");
-                }, textOutTimer)
-​
-                setTimeout(function () {
-​
-                    if (index == txtsLen - 1) {
-                        index = 0;
-                    }
-                    else {
-                        index++;
-                    }
-                    animateText();
-                }, textInTimer);
-            }
-​
-            window.onload = animateText;
-​
-        </script> -->
+    </footer>
 </body>
 
 </html>
