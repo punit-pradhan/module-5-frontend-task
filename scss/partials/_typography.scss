@@ -1,3 +1,4 @@
+// Define font sizes for different headings
 $font-size-h1: 50px;
 $font-size-h2: 40px;
 $font-size-h3: 30px;
@@ -5,6 +6,7 @@ $font-size-h4: 24px;
 $font-size-h5: 20px;
 $font-size-h6: 18px;
 
+// Define font faces using @font-face
 @font-face {
   font-family: BebasNeue-Regular;
   src: url(../fonts/BebasNeue-Regular.ttf);
@@ -60,9 +62,9 @@ $font-size-h6: 18px;
   src: url(../fonts/Lato-BoldItalic.ttf);
 }
 
-  $font-weights: (
+// Define font weights using a map
+$font-weights: (
   "regular": 400,
   "medium": 500,
   "bold": 700
-  );
-  
+);
