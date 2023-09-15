@@ -1,0 +1,137 @@
+// Import styles from "../partials/importers"
+@use "../partials/importers" as *;
+
+// Define the main section
+main {
+    section {
+        // The following styles are for a flex container
+        .flex {
+            // Apply mobile-specific styles
+            @include mobile {
+                flex-direction: column-reverse;
+            }
+
+            // Section 1 styles
+            .section-1 {
+                width: 50%;
+
+                // Apply mobile-specific styles
+                @include mobile {
+                    width: 100%;
+                }
+
+                // Styles for a business consultant section
+                .business_consultant {
+                    // Apply mobile-specific styles
+                    @include mobile {
+                        margin-top: 20px;
+                    }
+
+                    p {
+                        color: $blue-color !important;
+                        font-weight: 700 !important;
+
+                        // Apply mobile-specific styles
+                        @include mobile {
+                            font-size: 14px;
+                        }
+
+                        &::before {
+                            display: inline-block;
+                            content: "";
+                            border-top: 0.3rem solid $yellow-color;
+                            width: 4rem;
+                            margin: 0 1rem 0 0;
+                            transform: translateY(-3px);
+
+                            // Apply mobile-specific styles
+                            @include mobile {
+                                border-top: 0.2rem solid $yellow-color;
+                                width: 3rem;
+                            }
+                        }
+                    }
+                }
+
+                h1 {
+                    letter-spacing: 7px;
+                    font-family: BebasNeue-Regular;
+                    font-size: 70px;
+                    margin: 30px 0;
+
+                    // Apply mobile-specific styles
+                    @include mobile {
+                        font-size: 30px;
+                        line-height: 40px;
+                    }
+                }
+
+                p {
+                    color: $gray-color;
+                    font-size: 17px;
+                    line-height: 27px;
+
+                    // Apply mobile-specific styles
+                    @include mobile {
+                        font-size: 13px;
+                        line-height: 23px;
+                    }
+                }
+
+                // Button styles
+                .get-started-btn {
+                    @include button;
+                    font-size: 18px;
+                    margin: 30px 0px;
+                    padding: 14px 20px;
+                    border-radius: 30px;
+
+                    // Apply mobile-specific styles
+                    @include mobile {
+                        font-size: 14px;
+                        margin: 20px 0px;
+                        padding: 12px 15px;
+                    }
+                }
+            }
+
+            // Section 1 bottom styles
+            .section-1-bottom {
+                margin: 10px 0 20px 0;
+
+                // Nested flex container
+                .flex {
+                    flex-direction: row !important;
+                    margin-top: 10px;
+
+                    // Yellow dots styles
+                    .yellow-dot {
+                        margin: 3px 30px;
+                        color: $yellow-color;
+
+                        // Apply mobile-specific styles
+                        @include mobile {
+                            margin: 3px 15px;
+                        }
+                    }
+                }
+            }
+
+            // Section 2 styles
+            .section-2 {
+                width: 50%;
+                padding-left: 40px;
+
+                img {
+                    @include image;
+                }
+
+                // Apply mobile-specific styles
+                @include mobile {
+                    width: 100%;
+                    padding-left: 0px;
+                }
+            }
+        }
+    }
+}

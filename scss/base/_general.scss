@@ -1,0 +1,23 @@
+// Import styles from "../partials/importers"
+@use "../partials/importers" as *;
+
+// Styles for a container element
+.container {
+    max-width: 1170px; // Set maximum width for larger screens
+    margin: auto; // Center the container horizontally
+
+    // Mobile-specific styles
+    @include mobile {
+        max-width: 350px; // Adjust maximum width for mobile screens
+    }
+}
+
+// Styles for creating a flex container
+.flex {
+    display: flex; // Use flexbox for layout
+}
+
+// Background color utility class
+.bg-color {
+    background-color: $lightgray-color; // Set the background color to a variable
+}

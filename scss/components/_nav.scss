@@ -1,0 +1,130 @@
+// Import styles from "../partials/importers"
+@use "../partials/importers" as *;
+
+// Styles for the navigation bar
+nav {
+    div {
+        width: 33.33%;
+        margin: auto;
+    }
+    .menu {
+        img {
+            display: none;
+            height: auto;
+            width: 20px;
+
+            // Show the menu icon on mobile devices
+            @include mobile {
+                display: block;
+            }
+        }
+        ul {
+            // Apply a flexbox layout
+            @include flex;
+            gap: 25px;
+
+            // Hide the navigation menu on mobile devices
+            @include mobile {
+                display: none;
+            }
+            li {
+                cursor: pointer;
+
+                // Styling for the active menu item
+                .active {
+                    color: $yellow-color;
+                }
+                a {
+                    color: $gray-color;
+                    display: block;
+                    font-size: 16px;
+                    line-height: 50px;
+                    transition: 0.5s;
+
+                    // Hover effect for menu items
+                    &:hover {
+                        color: $yellow-color;
+                    }
+                }
+            }
+        }
+        // Styles for the mobile navigation menu
+        @include mobile {
+            .hidden-menu {
+                position: absolute;
+                z-index: 2;
+                background-color: $lightgray-color;
+                padding: 20px;
+            }
+        }
+    }
+}
+
+// Styles for the logo section
+.logo {
+    text-align: center;
+    cursor: pointer;
+
+    a {
+        margin-top: 10px;
+        img {
+            // Adjust logo size for mobile devices
+            @include mobile {
+                width: 70%;
+                height: auto;
+            }
+        }
+    }
+}
+
+// Styles for the navbar
+.navbar {
+    // Apply a flexbox layout with space between items
+    @include flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+// Styles for the navigation buttons
+.nav-btn {
+    // Apply a flexbox layout with content aligned to the end
+    @include flex;
+    justify-content: end;
+    .active {
+        background-color: $white-color;
+        margin-right: 20px;
+
+        // Adjust margin for mobile devices
+        @include mobile {
+            margin-right: 10px;
+        }
+        a {
+            color: $gray-color;
+        }
+        &:hover {
+            background-color: $blue-color;
+            a {
+                color: $white-color;
+            }
+        }
+    }
+    button {
+        @include button;
+        font-size: 15px;
+        margin: 10px 0;
+        padding: 10px 16px;
+        border-radius: 20px;
+
+        // Adjust button size for mobile devices
+        @include mobile {
+            font-size: 10px;
+            margin: 0px 0px;
+            padding: 5px 7px;
+        }
+    }
+}
+
+// Show the element with the "show" class
+.show {
+    display: block !important;
+}
